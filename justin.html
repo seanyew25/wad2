@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Bieber Fanpage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to the Justin Bieber Fanpage!</h1>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Belieber Forever</h2>
+        <p>Your ultimate destination for everything Justin Bieber!</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <img src="justin1.webp" alt="Justin Bieber" />
+      <img src="justin2.webp" alt="Justin Bieber" />
+      <img src="justin3.webp" alt="Justin Bieber" />
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Justin Bieber Fanpage. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".gallery img");
+        images.forEach((img) => {
+          img.addEventListener("mouseover", () => {
+            img.style.border = "5px solid #FFD700";
+          });
+          img.addEventListener("mouseout", () => {
+            img.style.border = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
