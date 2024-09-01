@@ -1,21 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ["poppins", ...defaultTheme.fontFamily.sans],
-            },
-          },
-        },
-        plugins: [],
-      };
-    </script>
+    <title>Intro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,40 +16,77 @@
         bottom: 10px;
         right: 10px;
       }
+
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: extra-bold;
+        font-size: large;
+      }
+
+      h2,
+      h3 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        font-size: larger;
+      }
+      p {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .box {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .welcome {
+        padding-top: 30px;
+      }
+      .aboutbox {
+        margin: auto;
+      }
+      .text-content {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+      #pfp {
+        border-radius: 50%;
+        height: 20rem;
+        width: 20rem;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      iframe {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
     </style>
   </head>
-  <body class="bg-amber-100">
-    <div class="flex-cols m-auto">
-      <div class="flex justify-center items-center p-10 space-x-10">
-        <div>
-          <h1 class="text-3xl font-bold font-poppins mb-2">
-            Welcome to my personal website...
-          </h1>
-          <h4 class="text-2xl font-poppins">I'm Sean Yew, nice to meet you!</h4>
-        </div>
-
-        <div class="flex">
-          <img class="rounded-full aspect-auto size-[20rem]" src="./pfp.jpg" />
-        </div>
+  <body style="background-color: bisque; color: black">
+    <div class="box welcome">
+      <div class="text-content">
+        <h3>Welcome to my personal website...</h3>
+        <h3>I'm Sean Yew 👋</h3>
       </div>
-      <div class="flex-cols px-10 mx-32">
-        <h1 class="font-poppins text-2xl font-bold my-2">About me</h1>
-        <p>
-          Hi, I am a sophomore undertaking a Bachelors of Science in Information
-          Systems in Singapore Management University. I am interested in backend
-          development and DevOps!
-        </p>
-      </div>
-      <iframe
-        width="400"
-        height="215"
-        src="https://www.youtube.com/embed/epqX_EmrQbQ?si=ZxLirreXDAWn2hPt"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+      <img id="pfp" src="pfp.jpg" />
     </div>
+    <div class="box about">
+      <h1>About me</h1>
+      <p>
+        Hi, I am a sophomore undertaking a Bachelors of Science in Information
+        Systems in Singapore Management University. I am interested in backend
+        development and DevOps!
+      </p>
+    </div>
+    <iframe
+      width="400"
+      height="215"
+      src="https://www.youtube.com/embed/epqX_EmrQbQ?si=ZxLirreXDAWn2hPt&autoplay=1&mute=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
   </body>
 </html>
